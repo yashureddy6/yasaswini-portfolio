@@ -1,0 +1,249 @@
+/* Root variables */
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #00b4d8;
+  --background: #f9f9fb;
+  --dark-color: #0d253f;
+  --text-color: #333f50;
+  --light-text: #6c7a89;
+  --white: #ffffff;
+  --border-radius: 8px;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.navbar .brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--dark-color);
+}
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-menu a {
+  color: var(--dark-color);
+  font-weight: 500;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--dark-color);
+}
+
+/* Hero */
+.hero {
+  padding: 140px 0 100px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.hero-buttons .btn {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  color: var(--white);
+  background: var(--dark-color);
+  font-weight: 500;
+}
+.hero-buttons .btn.btn-secondary {
+  background: var(--secondary-color);
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark-color);
+}
+
+/* About */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.about-img {
+  width: 300px;
+  border-radius: var(--border-radius);
+}
+.about-img img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+/* Education */
+.education-item {
+  margin-bottom: 1.5rem;
+}
+.education-item h3 {
+  margin-bottom: 0.25rem;
+  color: var(--dark-color);
+}
+.edu-date {
+  font-style: italic;
+  color: var(--light-text);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Skills */
+.skills-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Experience */
+.experience-item {
+  margin-bottom: 2rem;
+}
+.experience-item h3 {
+  margin-bottom: 0.25rem;
+  color: var(--dark-color);
+}
+.exp-date {
+  font-style: italic;
+  color: var(--light-text);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.experience-item ul {
+  list-style: disc;
+  margin-left: 1.2rem;
+}
+.experience-item li {
+  margin-bottom: 0.5rem;
+}
+
+/* Projects */
+.project-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.project-item img {
+  width: 250px;
+  border-radius: var(--border-radius);
+}
+.project-text h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+.project-text p {
+  color: var(--text-color);
+}
+
+/* Contact */
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+.contact-list a {
+  color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+  background: var(--dark-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content,
+  .project-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background: var(--white);
+    width: 200px;
+    display: none;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
