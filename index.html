@@ -1,160 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Yasaswini P – Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-<nav class="navbar">
-  <div class="container">
-    <a href="#home" class="brand">Yasaswini P</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header id="home" class="hero">
-  <div class="container hero-content">
-    <h1>Yasaswini P</h1>
-    <p>Software Engineer & Computer Science Graduate Student</p>
-    <div class="hero-buttons">
-      <a href="Resume_Yasaswini_ft.pdf" class="btn">Download Resume</a>
-      <a href="#projects" class="btn btn-secondary">See Projects</a>
-    </div>
-  </div>
-</header>
-
-<section id="about" class="about-section">
-  <div class="container">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <img src="coder.png" alt="Coding illustration" class="about-img">
-      <div class="about-text">
-        <p>Hello! I’m Yasaswini, a passionate software engineer and current M.S. student in Computer Science at Stony Brook University. With a strong foundation in cloud computing and distributed systems, I enjoy solving complex problems and crafting scalable solutions.</p>
-        <p>My experience ranges from optimizing AWS cost reporting and designing cloud dashboards to building microservices with gRPC, Docker and Kubernetes. Beyond the code, I thrive in collaborative environments and love exploring new technologies, contributing to open source and hiking outdoors.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="education-section">
-  <div class="container">
-    <h2>Education</h2>
-    <div class="education-item">
-      <h3>Stony Brook University – M.S. in Computer Science</h3>
-      <span class="edu-date">Aug 2024 – May 2026</span>
-      <p>Graduate coursework focusing on distributed systems, cloud computing, artificial intelligence and data analytics.</p>
-    </div>
-    <div class="education-item">
-      <h3>JSS Academy of Technical Education – B.E. in Computer Science</h3>
-      <span class="edu-date">Aug 2018 – Jul 2022</span>
-      <p>Completed undergraduate studies with a CGPA of 8.58 while building a strong foundation in algorithms, operating systems and computer networks.</p>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="skills-section">
-  <div class="container">
-    <h2>Technical Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Languages:</strong> Java, Python, Go, C, SQL/Postgres, JavaScript, HTML/CSS, R</li>
-      <li><strong>Frameworks:</strong> React, Node.js, Flask, FastAPI, SpringBoot, Kubernetes, Docker, Jenkins, Bitbucket</li>
-      <li><strong>Developer Tools:</strong> Git, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse</li>
-      <li><strong>Cloud:</strong> Compute, Storage, Networking, Database, Security, CDN, Google Kubernetes Engine, Google Cloud Platform, Docker</li>
-    </ul>
-  </div>
-</section>
-
-<section id="experience" class="experience-section">
-  <div class="container">
-    <h2>Experience</h2>
-    <div class="experience-item">
-      <h3>Software Engineer Intern – DataBahn, Inc. (Remote)</h3>
-      <span class="exp-date">May 2025 – Aug 2025, Plano, TX, USA</span>
-      <ul>
-        <li>Automated AWS cost and usage reporting via API integrations, improving data accuracy by 30%.</li>
-        <li>Developed dynamic dashboards and scalable backend APIs for cost and agent data ingestion and visualization, boosting monitoring efficiency and throughput by 25–40%.</li>
-        <li>Aligned cloud cost metrics with product data to improve margin accuracy by 15%.</li>
-        <li>Researched and integrated AI frameworks for anomaly detection and log summarization, reducing manual analysis time by 20%.</li>
-        <li>Authored technical documentation and applied cloud cost optimization and FinOps principles to increase team alignment by 35% and enable 10% cost reduction.</li>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="brand">Yasaswini P</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <div class="experience-item">
-      <h3>Associate Software Engineer (Cloud DevOps)</h3>
-      <span class="exp-date">Dec 2022 – Jul 2024, Bangalore, India</span>
-      <ul>
-        <li>Designed and implemented a scalable user login microservice using gRPC technology, achieving 50% faster communication between services versus REST.</li>
-        <li>Utilized Docker for containerization, ensuring consistent deployments and streamlined versioning across multiple environments.</li>
-        <li>Integrated Cloud SQL to store application metadata, ensuring 99.9% data consistency and reliability.</li>
-        <li>Developed canary rollout functionality with automatic rollback on bad deployments, minimizing service downtime to less than 2 seconds during faulty updates.</li>
-        <li>Created a dedicated proxy for rate‑limiting, circuit‑breaking and observability supporting gRPC and GraphQL with latency overhead below 5 ms.</li>
-        <li>Optimized data pipelines for raw data transformation and database updates, improving data integrity and accessibility by 30%.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </nav>
 
-<section id="projects" class="projects-section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="project-item">
-      <img src="pbft_gen.png" alt="pBFT illustration">
-      <div class="project-text">
-        <h3>Practical Byzantine Fault‑Tolerant System</h3>
-        <p>Implemented the pBFT protocol to achieve 99.9% reliability with 2F+1 quorum validation, tolerating up to 33% server faults across seven distributed servers【535648690367335†L86-L93】. Optimized secure client‑server communication with 2048‑bit RSA signing, boosting security by 30% and improving throughput by 35%【535648690367335†L130-L133】. Added features like real‑time transaction logging, server execution tracking and view‑change mechanisms.</p>
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Yasaswini P</h1>
+      <p>Software Engineer &amp; Computer Science Graduate Student</p>
+      <div class="hero-buttons">
+        <a href="Resume_Yasaswini_ft.pdf" class="btn">Download Resume</a>
+        <a href="#projects" class="btn btn-secondary">See Projects</a>
       </div>
     </div>
-    <div class="project-item">
-      <img src="paxos_gen.png" alt="Paxos illustration">
-      <div class="project-text">
-        <h3>Distributed Banking System with Paxos</h3>
-        <p>Developed a distributed banking system using the Paxos consensus protocol to provide low‑latency, fault‑tolerant transaction processing. The system achieves consistent state replication across servers and clients and maintains high throughput using asynchronous I/O and non‑blocking design【237270829584605†L175-L204】.</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="images/coder.png" alt="Coding illustration" class="about-img" />
+        <div class="about-text">
+          <p>Hello! I’m Yasaswini, a passionate software engineer and current M.S. student in Computer Science at Stony Brook University. With a strong foundation in cloud computing and distributed systems, I enjoy solving complex problems and crafting scalable solutions. My experience ranges from optimizing AWS cost reporting to designing microservices using gRPC and Docker.</p>
+          <p>Beyond my technical skills, I’m an avid learner who thrives in collaborative environments. I believe in combining engineering expertise with creative thinking to build applications that make a difference. When I’m not coding, you’ll find me exploring new technologies, contributing to open source, or enjoying nature hikes.</p>
+        </div>
       </div>
     </div>
-    <div class="project-item">
-      <img src="sentiment_gen.png" alt="Sentiment analysis illustration">
-      <div class="project-text">
-        <h3>Keyword Prediction for E‑commerce using Sentiment Analysis</h3>
-        <p>Created a sentiment analysis‑based recommendation engine using Naïve Bayes, SVM and RNN models. The system processes user reviews and e‑commerce data to generate keyword‑based product rankings, achieving high accuracy and improving user search efficiency【521748542690786†L38-L44】.</p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-item">
+        <img src="images/stonybrook_logo.png" alt="Stony Brook University logo" class="edu-logo" />
+        <div class="edu-details">
+          <h3>Stony Brook University</h3>
+          <p>Master of Science in Computer Science<br /><span class="edu-date">Aug 2024 – May 2026</span></p>
+          <p>Stony Brook, NY</p>
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="edu-logo-placeholder">JSS</div>
+        <div class="edu-details">
+          <h3>JSS Academy of Technical Education</h3>
+          <p>Bachelor of Engineering in Computer Science – CGPA 8.58<br /><span class="edu-date">Aug 2018 – Jul 2022</span></p>
+          <p>Bangalore, India</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>If you’d like to get in touch about opportunities or collaborations, feel free to reach out!</p>
-    <ul class="contact-list">
-      <li>Email: <a href="mailto:yashureddy161@gmail.com">yashureddy161@gmail.com</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/yasaswini" target="_blank">linkedin.com/in/yasaswini</a></li>
-      <li>GitHub: <a href="https://github.com/yasaswini" target="_blank">github.com/yasaswini</a></li>
-    </ul>
-  </div>
-</section>
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Go</li>
+            <li>C</li>
+            <li>SQL (Postgres)</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>R</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks &amp; Tools</h3>
+          <ul>
+            <li>React &amp; ReactJS</li>
+            <li>Node.js &amp; SpringBoot</li>
+            <li>Flask &amp; FastAPI</li>
+            <li>Kubernetes &amp; Docker</li>
+            <li>Jenkins &amp; Bitbucket</li>
+            <li>Git &amp; VS Code</li>
+            <li>IntelliJ &amp; PyCharm</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Cloud &amp; Platforms</h3>
+          <ul>
+            <li>Google Cloud Platform (GKE, Compute, Storage, Networking)</li>
+            <li>Cloud SQL &amp; Databases</li>
+            <li>Security, CDN &amp; FinOps</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Yasaswini P. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Software Engineer Intern – DataBahn, Inc.</h3>
+        <span class="exp-location">Plano, TX (Remote)</span><span class="exp-date">May 2025 – Aug 2025</span>
+        <ul>
+          <li>Automated AWS cost and usage reporting via API integrations, improving data accuracy by 30%.</li>
+          <li>Developed dynamic dashboards and scalable backend APIs for cost and agent data ingestion and visualization, boosting monitoring efficiency by 25–40%.</li>
+          <li>Aligned cloud cost metrics with product data to improve margin accuracy by 15%.</li>
+          <li>Researched and integrated AI frameworks for anomaly detection and log summarization, reducing manual analysis time by 20%.</li>
+          <li>Documented technical designs and applied FinOps principles to achieve a 10% cost reduction.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Associate Software Engineer – Accenture (Google Cloud Tech)</h3>
+        <span class="exp-location">Bangalore, India</span><span class="exp-date">Dec 2022 – Jul 2024</span>
+        <ul>
+          <li>Designed a scalable user login microservice using gRPC, achieving 50% faster communication compared to REST alternatives.</li>
+          <li>Containerized services with Docker for consistent deployments, reducing errors by 40%.</li>
+          <li>Integrated Cloud SQL for metadata storage, ensuring 99.9% data consistency.</li>
+          <li>Implemented canary rollouts with automatic rollback to minimize service downtime to under 2 seconds.</li>
+          <li>Developed sidecar proxies for rate limiting, circuit breaking and observability with less than 5 ms latency overhead.</li>
+          <li>Optimized data pipelines to improve data integrity and accessibility by 30%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<script src="js/script.js"></script>
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="images/pbft_gen.png" alt="PBFT system illustration" />
+          <div class="project-content">
+            <h3>Practical Byzantine Fault‑Tolerant System</h3>
+            <p>A Python implementation of the MIT PBFT protocol achieving 99.9% reliability across 7 servers. It features secure client–server communication using 2048‑bit RSA signing and optimizes throughput with multithreading.</p>
+            <ul>
+              <li>Uses quorum validation to tolerate up to 33% faulty servers.</li>
+              <li>Enhances security with RSA signatures and improves throughput by 35%.</li>
+              <li>Supports view‑change and transaction logging for robust fault recovery.</li>
+            </ul>
+            <a href="https://github.com/yashureddy6" class="project-link" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/paxos_gen.png" alt="Distributed banking Paxos illustration" />
+          <div class="project-content">
+            <h3>Distributed Banking System with Paxos</h3>
+            <p>Built a low‑latency, fault‑tolerant banking system using the Paxos consensus algorithm. The system ensures strong consistency across 5 servers and handles 1,000+ transactions per second.</p>
+            <ul>
+              <li>Employs asynchronous consensus with multi‑threaded execution for 40% higher throughput.</li>
+              <li>Guarantees agreement among unreliable nodes using Paxos consensus.</li>
+              <li>Tracks balances and replicates state synchronously across clients and servers.</li>
+            </ul>
+            <a href="https://github.com/yashureddy6" class="project-link" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/sentiment_gen.png" alt="Sentiment analysis illustration" />
+          <div class="project-content">
+            <h3>Keyword Prediction for E‑commerce</h3>
+            <p>A recommendation system that combines Naïve Bayes, SVM and RNN models to analyze user reviews and predict product keywords with 96% accuracy. It incorporates real‑time web scraping to process 10K+ reviews.</p>
+            <ul>
+              <li>Sentiment analysis extracts emotions from text and classifies reviews as positive or negative.</li>
+              <li>Naïve Bayes is a simple yet powerful classifier often matching more complex models.</li>
+              <li>Improves user search efficiency by 70% with keyword‑based rankings.</li>
+            </ul>
+            <a href="https://github.com/yashureddy6" class="project-link" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Interested in working together or have a question? Feel free to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:yashureddyy161@gmail.com" class="contact-link">Email</a>
+        <a href="https://www.linkedin.com/in/yasaswinireddy06/" class="contact-link" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yashureddy6" class="contact-link" target="_blank">GitHub</a>
+        <span class="contact-phone">Phone: +1 (631) 681‑9036</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Yasaswini P. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
 </body>
 </html>
